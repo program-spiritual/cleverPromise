@@ -1,0 +1,31 @@
+{
+  "name": "cleverpromise",
+  "version": "1.0.0",
+  "description": "clever Promise Wrapper",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/xiaomiwujiecao/cleverPromise.git"
+  },
+  "keywords": [
+    "nodejs",
+    "promise",
+    "javascript",
+    "ecmascript6",
+    "es2015",
+    "typescript"
+  ],
+  "author": "reverse",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/xiaomiwujiecao/cleverPromise/issues"
+  },
+  "homepage": "https://github.com/xiaomiwujiecao/cleverPromise#readme",
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "mocha": "^5.2.0"
+  }
+}
