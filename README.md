@@ -1,10 +1,9 @@
 # cleverPromise
 
-demo:
+import :
 
 ```ecmascript 6
-let {arrayWrapper} = require('../cleverPromise')
-let {objectWrapper} = require('../cleverPromise')
+let {arrayWrapper,objectWrapper} = require('cleverpromise')
 ```
 
 ## case :
