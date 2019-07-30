@@ -15,7 +15,8 @@ describe(
     })
     var [p1Error, p1Result] = await arrayWrapper(promise1)
     console.log(p1Error, p1Result)
+    //     下面的运行结果会导致报错
     var {err, data} = await objectWrapper(promise2)
-    console.log('err:',err, 'data',data)
+    console.log('err:', err, 'data', data)
   }
 )
