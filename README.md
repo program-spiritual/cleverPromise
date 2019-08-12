@@ -6,7 +6,7 @@ import :
 let {arrayWrapper,objectWrapper} = require('cleverpromise')
 ```
 
-## case 1:
+## case 1:(promise wwrapper)
 
 ```js
 async function f() {
@@ -15,7 +15,7 @@ async function f() {
 }
 ```
 
-## case 2:
+## case 2: (file)
 
 ```js
 
