@@ -56,8 +56,11 @@ const fn = item => {
 // safeNumber
 
  const exp1 = 0.1 + 0.2
+ 
  console.log(utilWrapper.safeNumber(exp1), typeof utilWrapper.safeNumber(exp1))
-      
+ const exp2 = 0.756*0.22
+ 
+ console.log(utilWrapper.safeNumber(exp2,20), typeof utilWrapper.safeNumber(exp2))
 ```
 
 

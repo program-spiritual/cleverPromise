@@ -42,9 +42,12 @@ describe(
 
     it('should be fine withe safeNumber', function () {
       const exp1 = 0.1 + 0.2
+      const exp2 = 0.756*0.22
       console.log(utilWrapper.safeNumber(exp1), typeof utilWrapper.safeNumber(exp1))
+      console.log(utilWrapper.safeNumber(exp2,20), typeof utilWrapper.safeNumber(exp2))
       assert(utilWrapper.safeNumber(exp1) == 0.3)
       assert(utilWrapper.safeNumber(0.3 / 0.1) == 3)
+
     });
   }
 )
