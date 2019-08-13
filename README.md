@@ -1,5 +1,8 @@
 # cleverPromise
 
+![](https://img.shields.io/travis/xiaomiwujiecao/cleverPromise?style=for-the-badge)
+
+![](https://img.shields.io/bundlephobia/min/cleverpromise)
 -   同步化异步编程，不要回调 arrayWrapper
 
 -   封装处理路径方法 pathWrapper

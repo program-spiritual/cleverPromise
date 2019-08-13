@@ -29,6 +29,11 @@
     "chai": "^4.2.0",
     "docdash": "^1.1.1",
     "jsdoc": "^3.6.3",
-    "mocha": "^5.2.0"
-  }
+    "mocha": "^5.2.0",
+    "pkgfiles": "^2.3.2"
+  },
+  "files": [
+    "index.js",
+    "lib"
+  ]
 }
