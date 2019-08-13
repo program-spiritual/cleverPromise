@@ -1,5 +1,11 @@
 # cleverPromise
 
+
+## API 文档：
+
+[documentation]()
+
+
 import :
 
 ```js
