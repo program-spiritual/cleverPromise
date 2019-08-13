@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://www.npmjs.com/package/cleverpromise" target="_blank" class="menu-item" id="website_link" >npm项目地址</a></h2><h2><a href="https://geek.thickink.com" target="_blank" class="menu-item" id="forum_link" >作者博客</a></h2><h3>Classes</h3><ul><li><a href="PathWrapper.html">PathWrapper</a><ul class='methods'><li data-type='method' style='display: none;'><a href="PathWrapper.html#formatFilePath">formatFilePath</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#getFileName">getFileName</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#getFilePath">getFilePath</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#getFilExtName">getFilExtName</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#getRelativePath">getRelativePath</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#joinFilePath">joinFilePath</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#parseFileFullPath">parseFileFullPath</a></li></ul></li><li><a href="UtilWrapper.html">UtilWrapper</a><ul class='methods'><li data-type='method' style='display: none;'><a href="UtilWrapper.html#isArrayLike">isArrayLike</a></li><li data-type='method' style='display: none;'><a href="UtilWrapper.html#quickRounding">quickRounding</a></li><li data-type='method' style='display: none;'><a href="UtilWrapper.html#rapidForLoop">rapidForLoop</a></li><li data-type='method' style='display: none;'><a href="UtilWrapper.html#safeNumber">safeNumber</a></li><li data-type='method' style='display: none;'><a href="UtilWrapper.html#uniqueArray">uniqueArray</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-arrayWrapper.html">arrayWrapper</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-arrayWrapper.html#.arrayWrapper">arrayWrapper</a></li></ul></li><li><a href="module-objectWrapper.html">objectWrapper</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-objectWrapper.html#.objectWrapper">objectWrapper</a></li></ul></li></ul><h3>Global</h3><ul><li><a href="global.html#processor">processor</a></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://www.npmjs.com/package/cleverpromise" target="_blank" class="menu-item" id="website_link" >npm项目地址</a></h2><h2><a href="https://geek.thickink.com" target="_blank" class="menu-item" id="forum_link" >作者博客</a></h2><h3>Classes</h3><ul><li><a href="PathWrapper.html">PathWrapper</a><ul class='methods'><li data-type='method' style='display: none;'><a href="PathWrapper.html#formatFilePath">formatFilePath</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#getFileName">getFileName</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#getFilePath">getFilePath</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#getFilExtName">getFilExtName</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#getRelativePath">getRelativePath</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#joinFilePath">joinFilePath</a></li><li data-type='method' style='display: none;'><a href="PathWrapper.html#parseFileFullPath">parseFileFullPath</a></li></ul></li><li><a href="UtilWrapper.html">UtilWrapper</a><ul class='methods'><li data-type='method' style='display: none;'><a href="UtilWrapper.html#isArrayLike">isArrayLike</a></li><li data-type='method' style='display: none;'><a href="UtilWrapper.html#quickRounding">quickRounding</a></li><li data-type='method' style='display: none;'><a href="UtilWrapper.html#rapidForLoop">rapidForLoop</a></li><li data-type='method' style='display: none;'><a href="UtilWrapper.html#safeNumber">safeNumber</a></li><li data-type='method' style='display: none;'><a href="UtilWrapper.html#uniqueArray">uniqueArray</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-arrayWrapper.html">arrayWrapper</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-arrayWrapper.html#.arrayWrapper">arrayWrapper</a></li></ul></li><li><a href="module-objectWrapper.html">objectWrapper</a><ul class='methods'><li data-type='method' style='display: none;'><a href="module-objectWrapper.html#.objectWrapper">objectWrapper</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -72,22 +72,24 @@
 
     <section class="readme">
         <article><h1>cleverPromise</h1>
-<p>import :</p>
+<h2>API 文档：</h2>
+<p><a href="">documentation</a></p>
+<p>导入方式 :</p>
 <pre class="prettyprint source lang-js"><code>let {arrayWrapper,objectWrapper} = require('cleverpromise')
 </code></pre>
-<h2>case 1:(promise wwrapper)</h2>
+<h2>案例 1:(promise wrapper)</h2>
 <pre class="prettyprint source lang-js"><code>async function f() {
   var [p1Error, p1Result] = await arrayWrapper(promise1)
   console.log(p1Error, p1Result)
 }
 </code></pre>
-<h2>case 2: (file)</h2>
+<h2>案例 2: (file)</h2>
 <pre class="prettyprint source lang-js"><code>
 const {pathWrapper} = require('cleverpromise')
 const fullPath = '/usr/local/bin/test.js'
 const currentFileName = pathWrapper.getFileName(fullPath,'.js')
 </code></pre>
-<h2>case 3 (util )</h2>
+<h2>案例 3 (util )</h2>
 <pre class="prettyprint source lang-js"><code>
 // uniqe 
 const {utilWrapper} = require('cleverpromise')
@@ -137,7 +139,7 @@ const fn = item => {
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Aug 13 2019 14:35:56 GMT+0800 (CST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Tue Aug 13 2019 14:44:10 GMT+0800 (CST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>

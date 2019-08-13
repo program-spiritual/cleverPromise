@@ -6,7 +6,7 @@
 [documentation]()
 
 
-import :
+导入方式 :
 
 ```js
 let {arrayWrapper,objectWrapper} = require('cleverpromise')
