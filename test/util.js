@@ -18,7 +18,7 @@ describe(
       const u = utilWrapper.uniqueArray(arr)
 //      console.log('u== [1,2,3,5] ',u==[1,2,3,5])
       assert(u.sort().toString() == [1, 2, 3, 5].sort().toString())
-
+      done()
     })
 
     it('should rapidForLoop be fine ', function () {
