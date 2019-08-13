@@ -31,16 +31,16 @@
       "Interfaces"
     ],
     "openGraph": {
-      "title": "Docdash",
+      "title": "cleverpromise-documentation",
       "type": "website",
       "image": "https://cloud.githubusercontent.com/assets/447956/13398144/4dde7f36-defd-11e5-8909-1a9013302cb9.png",
-      "site_name": "Docdash",
-      "url": "http://clenemt.github.io/docdash/"
+      "site_name": "cleverpromise",
+      "url": "https://github.com/xiaomiwujiecao/cleverPromise"
     },
     "meta": {
-      "title": "Docdash",
-      "description": "A clean, responsive documentation template theme for JSDoc 3.",
-      "keyword": "jsdoc, docdash"
+      "title": "cleverpromise-documentation",
+      "description": "clever promise wrapper and util wrapper",
+      "keyword": "jsdoc, docdash , cleverpromise "
     },
     "search": true,
     "collapse": true,
