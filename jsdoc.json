@@ -1,0 +1,65 @@
+{
+  "source": {
+    "include": [ "lib/",  "./README.md" ],
+    "exclude": [ "src/libs" ]
+  },
+  "plugins": [
+    "plugins/markdown"
+  ],
+  "opts": {
+    "template": "node_modules/docdash",
+    "encoding": "utf8",
+    "destination": "./docs/",
+    "recurse": true,
+    "verbose": true
+  },
+  "templates": {
+    "cleverLinks": false,
+    "monospaceLinks": false
+  },
+  "docdash": {
+    "static": true,
+    "sort": true,
+    "sectionOrder": [
+      "Classes",
+      "Modules",
+      "Externals",
+      "Events",
+      "Namespaces",
+      "Mixins",
+      "Tutorials",
+      "Interfaces"
+    ],
+    "openGraph": {
+      "title": "Docdash",
+      "type": "website",
+      "image": "https://cloud.githubusercontent.com/assets/447956/13398144/4dde7f36-defd-11e5-8909-1a9013302cb9.png",
+      "site_name": "Docdash",
+      "url": "http://clenemt.github.io/docdash/"
+    },
+    "meta": {
+      "title": "Docdash",
+      "description": "A clean, responsive documentation template theme for JSDoc 3.",
+      "keyword": "jsdoc, docdash"
+    },
+    "search": true,
+    "collapse": true,
+    "typedefs": true,
+    "removeQuotes": "none",
+    "scripts": [],
+    "menu":{
+      "npm项目地址":{
+        "href":"https://www.npmjs.com/package/cleverpromise",
+        "target":"_blank",
+        "class":"menu-item",
+        "id":"website_link"
+      },
+      "作者博客":{
+        "href":"https://geek.thickink.com",
+        "target":"_blank",
+        "class":"menu-item",
+        "id":"forum_link"
+      }
+    }
+  }
+}

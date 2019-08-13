@@ -6,7 +6,7 @@ import :
 let {arrayWrapper,objectWrapper} = require('cleverpromise')
 ```
 
-## case 1:(promise wwrapper)
+## 案例 1:(promise wrapper)
 
 ```js
 async function f() {
@@ -15,7 +15,7 @@ async function f() {
 }
 ```
 
-## case 2: (file)
+## 案例 2: (file)
 
 ```js
 
@@ -24,7 +24,7 @@ const fullPath = '/usr/local/bin/test.js'
 const currentFileName = pathWrapper.getFileName(fullPath,'.js')
 ```
 
-## case 3 (util )
+## 案例 3 (util )
 
 
 ```js
@@ -58,6 +58,7 @@ const fn = item => {
  const exp1 = 0.1 + 0.2
  
  console.log(utilWrapper.safeNumber(exp1), typeof utilWrapper.safeNumber(exp1))
+ 
  const exp2 = 0.756*0.22
  
  console.log(utilWrapper.safeNumber(exp2,20), typeof utilWrapper.safeNumber(exp2))

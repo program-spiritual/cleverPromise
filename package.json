@@ -4,7 +4,8 @@
   "description": "clever Promise Wrapper",
   "main": "index.js",
   "scripts": {
-    "test": "mocha test/"
+    "test": "mocha test/",
+    "build:doc": "jsdoc -c jsdoc.json"
   },
   "repository": {
     "type": "git",
@@ -26,6 +27,8 @@
   "homepage": "https://github.com/xiaomiwujiecao/cleverPromise#readme",
   "devDependencies": {
     "chai": "^4.2.0",
+    "docdash": "^1.1.1",
+    "jsdoc": "^3.6.3",
     "mocha": "^5.2.0"
   }
 }
