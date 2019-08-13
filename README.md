@@ -8,7 +8,7 @@
 
 ## API 文档：
 
-[documentation]()
+[documentation](https://xiaomiwujiecao.github.io/cleverPromise/)
 
 
 导入方式 :
