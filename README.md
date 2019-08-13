@@ -1,5 +1,10 @@
 # cleverPromise
 
+-   同步化异步编程，不要回调 arrayWrapper
+
+-   封装处理路径方法 pathWrapper
+
+-  封装常用的JS技巧 utilWrapper
 
 ## API 文档：
 
