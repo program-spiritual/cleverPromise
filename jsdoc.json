@@ -43,7 +43,7 @@
       "keyword": "jsdoc, docdash , cleverpromise "
     },
     "search": true,
-    "collapse": true,
+    "collapse": false,
     "typedefs": true,
     "removeQuotes": "none",
     "scripts": [],
@@ -54,11 +54,17 @@
         "class":"menu-item",
         "id":"website_link"
       },
-      "作者博客":{
+      "作者博客(感谢收藏)":{
         "href":"https://geek.thickink.com",
         "target":"_blank",
         "class":"menu-item",
         "id":"forum_link"
+      },
+      "github(感谢star)":{
+        "href":"https://github.com/xiaomiwujiecao/cleverPromise",
+        "target":"_blank",
+        "class":"menu-item",
+        "id":"website_link"
       }
     }
   }
