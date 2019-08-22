@@ -3,16 +3,28 @@
 ![](https://img.shields.io/travis/xiaomiwujiecao/cleverPromise?style=for-the-badge)
 
 ![](https://img.shields.io/bundlephobia/min/cleverpromise)
--   同步化异步编程，不要回调 arrayWrapper
 
--   封装处理路径方法 pathWrapper
+## Classes
 
--  封装常用的JS技巧 utilWrapper
 
-## API 文档：
+
+-    `pathWrapper` :封装处理路径方法
+
+-    `utilWrapper` :封装常用的JS技巧 
+
+-    `DateWrapper` :封装时间操作辅助方法
+
+#  Modules
+
+-    `arrayWrapper`   :同步化异步编程，数组化处理 `promise`
+-    `objectWrapper`   :同步化异步编程，对象化处理 `promise`
+
+## API Documentation：
 
 [documentation](https://xiaomiwujiecao.github.io/cleverPromise/)
 
+
+## 示例：
 
 导入方式 :
 
@@ -78,4 +90,12 @@ const fn = item => {
  console.log(utilWrapper.safeNumber(exp2,20), typeof utilWrapper.safeNumber(exp2))
 ```
 
+## 案例4 (date )
 
+```js
+const {DateWrapper} = require('cleverpromise')
+const  date1 = '2018-12-2 11:22'
+const  date2 = '2018/12/2 11:22'
+console.log(DateWrapper.transDateStringStandard(date1))
+console.log(DateWrapper.transDateStringStandard(date2))
+```
