@@ -17,7 +17,8 @@
     "javascript",
     "ecmascript6",
     "es2015",
-    "typescript"
+    "typescript",
+    "clever promise util"
   ],
   "author": "reverse",
   "license": "MIT",

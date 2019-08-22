@@ -3,7 +3,7 @@
 <head>
     
     <meta charset="utf-8">
-    <title>objectWrapper - cleverpromise-documentation</title>
+    <title>DateWrapper.js - cleverpromise-documentation</title>
     
     <meta name="description" content="clever promise wrapper and util wrapper" />
     
@@ -46,219 +46,60 @@
 
 <div id="main">
     
-    <h1 class="page-title">objectWrapper</h1>
+    <h1 class="page-title">DateWrapper.js</h1>
     
 
     
 
 
 
-
-<section>
-
-<header>
     
-        
-    
-</header>
-
-<article>
-    
-        <div class="container-overview">
-        
-            
-
-            
-        
-        </div>
-    
-
-    
-
-    
-
-    
-    
-    
-
-     
-
-    
-
-    
-
-    
-        <h3 class="subsection-title">Methods</h3>
-
-        
-            
-
-    
-
-    <h4 class="name" id=".objectWrapper"><span class="type-signature">(static) </span>objectWrapper<span class="signature">(promise)</span><span class="type-signature"> &rarr; {ArrayLike}</span></h4>
-
-    
-
-
-
-
-<dl class="details">
-
-    
-    <dt class="tag-source">Source:</dt>
-    <dd class="tag-source"><ul class="dummy"><li>
-        <a href="objectWrapper.js.html">objectWrapper.js</a>, <a href="objectWrapper.js.html#line15">line 15</a>
-    </li></ul></dd>
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-
-    
-</dl>
-
-
-
-
-
-<div class="description">
-    <p>objectWrapper</p>
-</div>
-
-
-
-
-
-
-
-
-
-    <h5>Example</h5>
-    
-    <pre class="prettyprint"><code>var [p1Error, p1Result] = await objectWrapper(promise1)
- console.log(p1Error, p1Result)</code></pre>
-
-
-
-
-    <h5>Parameters:</h5>
-    
-
-<table class="params">
-    <thead>
-    <tr>
-        
-        <th>Name</th>
-        
-
-        <th>Type</th>
-
-        
-
-        
-
-        <th class="last">Description</th>
-    </tr>
-    </thead>
-
-    <tbody>
-    
-
-        <tr>
-            
-                <td class="name"><code>promise</code></td>
-            
-
-            <td class="type">
-            
-                
-<span class="param-type">Promise</span>
-
-
-            
-            </td>
-
-            
-
-            
-
-            <td class="description last"><p>Promise 化的执行体</p></td>
-        </tr>
-
-    
-    </tbody>
-</table>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h5>Returns:</h5>
-
-        
-
-
-<dl class="param-type">
-    <dt>
-        Type
-    </dt>
-    <dd>
-        
-<span class="param-type">ArrayLike</span>
-
-
-    </dd>
-</dl>
-
-    
-
-
-
-        
-    
-
-    
-
-    
-</article>
-
-</section>
+    <section>
+        <article>
+            <pre class="prettyprint source linenums"><code>/**
+ * 处理日期的常用包装器
+ *
+ * @class
+ *
+ * */
+
+class DateWrapper {
+  constructor(props) {
+//    super(props);
+
+  }
+
+  /**
+   * 转化时间字符串为标准时间
+   *@public
+   * @param {string | Date } date - 标准时间字符创
+   * @version 1.1.4
+   * @example
+   *
+   * // 时间字符串的标准为： 2018-02-02 11:22
+   *
+   * // chrome 内核字符串 2018-02-02 11:22
+   * // safari 内核字符串  2018/02/02 11:22
+   *
+   const {DateWrapper} = require('cleverpromise')
+   const  date1 = '2018-12-2 11:22'
+   const  date2 = '2018/12/2 11:22'
+   console.log(DateWrapper.transDateStringStandard(date1))
+   console.log(DateWrapper.transDateStringStandard(date2))
+   * */
+  transDateStringStandard(date) {
+    if ('string' != typeof date) {
+      return date
+    }
+    return new Date(date.replace(/\-/g, '/'))
+  }
+
+}
+
+module.exports = {DateWrapper:new DateWrapper()}
+</code></pre>
+        </article>
+    </section>
 
 
 
