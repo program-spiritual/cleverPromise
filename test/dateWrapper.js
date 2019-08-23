@@ -7,10 +7,13 @@ describe('测试时间辅助类',()=>{
   it('should be translated as standard Date', function () {
     const  date1 = '2018-12-2 11:22'
     const  date2 = '2018/12/2 11:22'
+    const date3 = new Date()
     console.log(DateWrapper.transDateStringStandard(date1))
     console.log(DateWrapper.transDateStringStandard(date2))
     expect(DateWrapper.transDateStringStandard(date1)).to.be.a('Date')
     expect(DateWrapper.transDateStringStandard(date2)).to.be.a('Date')
-
+    expect(DateWrapper.msToDateString(date3)).to.be.a('Object')
+    expect(DateWrapper.msToDateString(date3).withoutSecond).to.be.a('string')
+    console.log(DateWrapper.msToDateString(date3))
   });
 })

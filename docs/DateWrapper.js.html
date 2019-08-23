@@ -41,7 +41,7 @@
     
     <input type="text" id="nav-search" placeholder="Search" />
     
-    <h2><a href="index.html">Home</a></h2><h2><a href="https://www.npmjs.com/package/cleverpromise" target="_blank" class="menu-item" id="website_link" >npm项目地址</a></h2><h2><a href="https://geek.thickink.com" target="_blank" class="menu-item" id="forum_link" >作者博客(感谢收藏)</a></h2><h2><a href="https://github.com/xiaomiwujiecao/cleverPromise" target="_blank" class="menu-item" id="website_link" >github(感谢star)</a></h2><h3>Classes</h3><ul><li><a href="DateWrapper.html">DateWrapper</a><ul class='methods'><li data-type='method'><a href="DateWrapper.html#transDateStringStandard">transDateStringStandard</a></li></ul></li><li><a href="PathWrapper.html">PathWrapper</a><ul class='methods'><li data-type='method'><a href="PathWrapper.html#formatFilePath">formatFilePath</a></li><li data-type='method'><a href="PathWrapper.html#getFileName">getFileName</a></li><li data-type='method'><a href="PathWrapper.html#getFilePath">getFilePath</a></li><li data-type='method'><a href="PathWrapper.html#getFilExtName">getFilExtName</a></li><li data-type='method'><a href="PathWrapper.html#getRelativePath">getRelativePath</a></li><li data-type='method'><a href="PathWrapper.html#joinFilePath">joinFilePath</a></li><li data-type='method'><a href="PathWrapper.html#parseFileFullPath">parseFileFullPath</a></li></ul></li><li><a href="UtilWrapper.html">UtilWrapper</a><ul class='methods'><li data-type='method'><a href="UtilWrapper.html#isArrayLike">isArrayLike</a></li><li data-type='method'><a href="UtilWrapper.html#quickRounding">quickRounding</a></li><li data-type='method'><a href="UtilWrapper.html#rapidForLoop">rapidForLoop</a></li><li data-type='method'><a href="UtilWrapper.html#safeNumber">safeNumber</a></li><li data-type='method'><a href="UtilWrapper.html#uniqueArray">uniqueArray</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-arrayWrapper.html">arrayWrapper</a><ul class='methods'><li data-type='method'><a href="module-arrayWrapper.html#.arrayWrapper">arrayWrapper</a></li></ul></li><li><a href="module-objectWrapper.html">objectWrapper</a><ul class='methods'><li data-type='method'><a href="module-objectWrapper.html#.objectWrapper">objectWrapper</a></li></ul></li></ul>
+    <h2><a href="index.html">Home</a></h2><h2><a href="https://www.npmjs.com/package/cleverpromise" target="_blank" class="menu-item" id="website_link" >npm项目地址</a></h2><h2><a href="https://geek.thickink.com" target="_blank" class="menu-item" id="forum_link" >作者博客(感谢收藏)</a></h2><h2><a href="https://github.com/xiaomiwujiecao/cleverPromise" target="_blank" class="menu-item" id="website_link" >github(感谢star)</a></h2><h3>Classes</h3><ul><li><a href="DateWrapper.html">DateWrapper</a><ul class='methods'><li data-type='method'><a href="DateWrapper.html#dateToMs">dateToMs</a></li><li data-type='method'><a href="DateWrapper.html#msToDateString">msToDateString</a></li><li data-type='method'><a href="DateWrapper.html#transDateStringStandard">transDateStringStandard</a></li></ul></li><li><a href="PathWrapper.html">PathWrapper</a><ul class='methods'><li data-type='method'><a href="PathWrapper.html#formatFilePath">formatFilePath</a></li><li data-type='method'><a href="PathWrapper.html#getFileName">getFileName</a></li><li data-type='method'><a href="PathWrapper.html#getFilePath">getFilePath</a></li><li data-type='method'><a href="PathWrapper.html#getFilExtName">getFilExtName</a></li><li data-type='method'><a href="PathWrapper.html#getRelativePath">getRelativePath</a></li><li data-type='method'><a href="PathWrapper.html#joinFilePath">joinFilePath</a></li><li data-type='method'><a href="PathWrapper.html#parseFileFullPath">parseFileFullPath</a></li></ul></li><li><a href="UtilWrapper.html">UtilWrapper</a><ul class='methods'><li data-type='method'><a href="UtilWrapper.html#isArrayLike">isArrayLike</a></li><li data-type='method'><a href="UtilWrapper.html#quickRounding">quickRounding</a></li><li data-type='method'><a href="UtilWrapper.html#rapidForLoop">rapidForLoop</a></li><li data-type='method'><a href="UtilWrapper.html#safeNumber">safeNumber</a></li><li data-type='method'><a href="UtilWrapper.html#uniqueArray">uniqueArray</a></li></ul></li></ul><h3>Modules</h3><ul><li><a href="module-arrayWrapper.html">arrayWrapper</a><ul class='methods'><li data-type='method'><a href="module-arrayWrapper.html#.arrayWrapper">arrayWrapper</a></li></ul></li><li><a href="module-objectWrapper.html">objectWrapper</a><ul class='methods'><li data-type='method'><a href="module-objectWrapper.html#.objectWrapper">objectWrapper</a></li></ul></li></ul>
 </nav>
 
 <div id="main">
@@ -94,9 +94,81 @@ class DateWrapper {
     return new Date(date.replace(/\-/g, '/'))
   }
 
+  /**
+   *
+   * 转换标准时间为  单位为毫秒的时间戳
+   * @param {stirng | Date} date -标准时间 或标准时间字符串
+   *
+   * */
+  dateToMs(date) {
+    let result = new Date(date).getTime();
+    return result;
+  }
+
+  /**
+   * 标准时间戳 或 标准时间对象 转换为 标准时间字符串
+   * @param { string | Date } msec
+   * @returns {Object} obj -  返回处理好的格式
+   * @returns {string} obj.hasTime - 标准时间字符串
+   * @returns {string} obj.withoutTime -  不带时间的标准日期字符串
+   * @returns {string} obj.withoutSecond -  不带秒数的标准时间字符串
+   *
+   * @example
+   const date3 = new Date()
+   console.log(DateWrapper.msToDateString(date3))
+   // 结果应该是这样子的:
+   { hasTime: '2019-08-23 13:21:07',
+  withoutTime: '2019-08-23',
+  withoutSecond: '2019-08-23 13:21' }
+   * */
+  msToDateString(msec) {
+    const datetime = new Date(msec);
+    const year = datetime.getFullYear();
+    const month = datetime.getMonth();
+    const date = datetime.getDate();
+    const hour = datetime.getHours();
+    const minute = datetime.getMinutes();
+    const second = datetime.getSeconds();
+//  第一种 返回标准时间
+    const hasTime = year +
+      '-' +
+      ((month + 1) >= 10 ? (month + 1) : '0' + (month + 1)) +
+      '-' +
+      ((date + 1) &lt; 10 ? '0' + date : date) +
+      ' ' +
+      ((hour + 1) &lt; 10 ? '0' + hour : hour) +
+      ':' +
+      ((minute + 1) &lt; 10 ? '0' + minute : minute) +
+      ':' +
+      ((second + 1) &lt; 10 ? '0' + second : second);
+// 第二种 返回日期格式
+    const withoutTime = year +
+      '-' +
+      ((month + 1) >= 10 ? (month + 1) : '0' + (month + 1)) +
+      '-' +
+      ((date + 1) &lt; 10 ? '0' + date : date);
+// 第三种 返回不带秒数的标砖时间
+    const withoutSecond = year +
+      '-' +
+      ((month + 1) >= 10 ? (month + 1) : '0' + (month + 1)) +
+      '-' +
+      ((date + 1) &lt; 10 ? '0' + date : date) +
+      ' ' +
+      ((hour + 1) &lt; 10 ? '0' + hour : hour) +
+      ':' +
+      ((minute + 1) &lt; 10 ? '0' + minute : minute)
+    return {
+      hasTime,
+      withoutTime,
+      withoutSecond,
+    }
+
+  }
+
+
 }
 
-module.exports = {DateWrapper:new DateWrapper()}
+module.exports = {DateWrapper: new DateWrapper()}
 </code></pre>
         </article>
     </section>
@@ -111,7 +183,7 @@ module.exports = {DateWrapper:new DateWrapper()}
 <br class="clear">
 
 <footer>
-    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Thu Aug 22 2019 15:22:07 GMT+0800 (CST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
+    Documentation generated by <a href="https://github.com/jsdoc3/jsdoc">JSDoc 3.6.3</a> on Fri Aug 23 2019 13:26:14 GMT+0800 (CST) using the <a href="https://github.com/clenemt/docdash">docdash</a> theme.
 </footer>
 
 <script>prettyPrint();</script>
